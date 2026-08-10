@@ -89,6 +89,12 @@ collections:
             fields:
               - { label: "Highlighted word", name: "stat", widget: "string" }
               - { label: "Rest of the phrase", name: "text", widget: "string" }
+          - label: "Hero photo"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Photo", name: "src", widget: "image" }
+              - { label: "Alt text (for screen readers)", name: "alt", widget: "string" }
 
       - name: "problem"
         label: "The Problem section"

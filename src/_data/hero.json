@@ -10,5 +10,9 @@
     { "stat": "No", "text": "building works" },
     { "stat": "Local", "text": "currency pricing" },
     { "stat": "Live", "text": "in under a week" }
-  ]
+  ],
+  "image": {
+    "src": "/assets/uploads/hero-portal-and-phone.jpg",
+    "alt": "The Audeo-Portal events schedule on a laptop next to a phone showing the same events live in the Audeohost-Events app"
+  }
 }

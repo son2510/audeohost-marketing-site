@@ -83,18 +83,7 @@ permalink: "{{ page.filePathStem }}.html"
   .hero-proof { margin-top: 30px; display: flex; gap: 22px; flex-wrap: wrap; font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
   .hero-proof strong { color: var(--emerald); }
 
-  .phone-mock { background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 20px; box-shadow: var(--shadow); }
-  .phone-mock .ph-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 0.7rem; color: var(--muted); margin-bottom: 14px; }
-  .phone-mock .ph-head .live { color: var(--signal); font-weight: 700; display: flex; align-items: center; gap: 6px; }
-  .phone-mock .ph-head .live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--signal); animation: pulse 1.6s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-  .ph-row { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 12px; padding: 11px 0; border-top: 1px solid var(--line); }
-  .ph-row:first-of-type { border-top: none; }
-  .ph-row .n { font-family: var(--mono); color: var(--gold); font-size: 0.82rem; }
-  .ph-row strong { display: block; font-size: 0.9rem; }
-  .ph-row span { color: var(--muted); font-size: 0.76rem; }
-  .ph-row .pick { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--line); }
-  .ph-row.sel .pick { border-color: var(--emerald); background: var(--emerald); }
+  .hero-photo { width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow); border: 1px solid var(--line); object-fit: cover; }
 
   /* section rhythm */
   section.block { padding: clamp(52px, 8vw, 96px) 0; border-top: 1px solid var(--line); }
@@ -258,13 +247,7 @@ permalink: "{{ page.filePathStem }}.html"
         {%- endfor %}
       </div>
     </div>
-    <div class="phone-mock" role="img" aria-label="Mock of the Audeohost app showing four live audio channels">
-      <div class="ph-head"><span>The Blue Heron — Sound channels</span><span class="live">LIVE</span></div>
-      <div class="ph-row sel"><span class="n">CH·1</span><div><strong>Ireland v France</strong><span>Six Nations · Main screen</span></div><span class="pick"></span></div>
-      <div class="ph-row"><span class="n">CH·2</span><div><strong>Man City v Arsenal</strong><span>Premier League · Screen 2</span></div><span class="pick"></span></div>
-      <div class="ph-row"><span class="n">CH·3</span><div><strong>Trivia Night</strong><span>Live now · Snug bar</span></div><span class="pick"></span></div>
-      <div class="ph-row"><span class="n">CH·4</span><div><strong>Ryder Cup — Day 2</strong><span>Golf · Terrace screen</span></div><span class="pick"></span></div>
-    </div>
+    <img class="hero-photo" src="{{ hero.image.src }}" alt="{{ hero.image.alt | safe }}">
   </div>
 </section>
 
