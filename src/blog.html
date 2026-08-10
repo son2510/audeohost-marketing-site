@@ -88,46 +88,18 @@ permalink: "{{ page.filePathStem }}.html"
       <p>Straightforward guides and real-world case studies for venues. Focused on event promotion, multi-screen experiences, and in-venue audio that customers actually love.</p>
     </div>
 
-    <!--
-      TO ADD A NEW POST: copy one <article class="post">...</article> block below
-      and paste it at the top of .posts (newest first). If the full article lives
-      on its own page, point the <a href> at that page; otherwise just remove the
-      <a> and put the full text straight in a <p> here.
-    -->
     <div class="posts">
+      {%- for post in collections.post | reverse %}
       <article class="post">
-        <span class="kind">Guide · Matchday experience · In-venue audio</span>
-        <h2><a href="blog/posts/why-sports-bars-lose-customers-without-commentary.html">Why sports bars lose customers when they can't hear the commentary</a></h2>
-        <p>Multiple screens, one audio source, and noisy rooms create frustration fast. Here's how venues keep fans engaged without turning the place into chaos.</p>
-        <div class="tags"><span>Sports bar</span><span>Customer experience</span><span>Retention</span></div>
+        <span class="kind">{{ post.data.eyebrow }}</span>
+        <h2><a href="blog/posts/{{ post.fileSlug }}.html">{{ post.data.title | safe }}</a></h2>
+        <p>{{ post.data.excerpt | safe }}</p>
+        <div class="tags">{% for tag in post.data.tagList %}<span>{{ tag }}</span>{% endfor %}</div>
       </article>
-      <article class="post">
-        <span class="kind">Guide · Event marketing · Hospitality</span>
-        <h2><a href="blog/posts/how-to-promote-events-without-social-media-burnout.html">How to promote venue events without living on social media</a></h2>
-        <p>Posters and one-off posts don't build predictable footfall. These systems help venues fill off-peak hours without constant posting.</p>
-        <div class="tags"><span>Event promotion</span><span>Footfall</span><span>Marketing</span></div>
-      </article>
-      <article class="post">
-        <span class="kind">Case study · Multi-screen · Operations</span>
-        <h2><a href="blog/posts/case-study-audio-to-phone-in-a-busy-sports-bar.html">Case study: Audio to phone in a busy multi-screen sports bar</a></h2>
-        <p>A real-world pattern that shows up everywhere: the venue wants atmosphere, but fans want commentary. Here's a practical rollout approach.</p>
-        <div class="tags"><span>Operations</span><span>Multi-screen</span><span>Rugby / Football</span></div>
-      </article>
-      <article class="post">
-        <span class="kind">Case study · Noise limits · Premium experience</span>
-        <h2><a href="blog/posts/case-study-quiet-lounge-clear-commentary.html">Case study: Quiet lounge, clear commentary, happier customers</a></h2>
-        <p>Some venues can't turn the volume up. Others simply don't want to. This approach keeps the room calm and the match enjoyable.</p>
-        <div class="tags"><span>Noise abatement</span><span>Lounges</span><span>Hospitality</span></div>
-      </article>
-      <article class="post">
-        <span class="kind">Checklist · Staff-ready · Peak times</span>
-        <h2><a href="blog/posts/checklist-matchday-setup-for-multi-screen-venues.html">Matchday checklist for multi-screen venues</a></h2>
-        <p>A fast, repeatable setup that reduces complaints, improves flow, and keeps customers glued to the game instead of the door.</p>
-        <div class="tags"><span>Checklist</span><span>Staff</span><span>Matchday</span></div>
-      </article>
+      {%- endfor %}
     </div>
 
-    <div class="note">These five are full pages under <code>blog/posts/</code>, self-hosted here rather than linking out — so they stay working even if this site becomes the real audeohost.com. For a new post, either add another page in <code>blog/posts/</code> the same way, or drop the full text straight into a new <code>&lt;article class="post"&gt;</code> block here on the listing.</div>
+    <div class="note">These are full pages under <code>blog/posts/</code>, self-hosted here rather than linking out — so they stay working even if this site becomes the real audeohost.com. New posts are added through the CMS, or by dropping a new Markdown file into <code>src/blog/posts/</code>.</div>
   </div>
 </main>
 
