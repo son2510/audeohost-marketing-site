@@ -1,7 +1,7 @@
 {
   "eyebrow": "One app, the whole property",
   "heading": "Dinner's at 7. The band's on at 8. Aqua-aerobics is at 9 tomorrow. One app finds all of it.",
-  "subhead": "Your hotel is a Supermarket, Audeohost is your flyer - dining, stage and screen, theatre, and a home away from home, all through a single door. Audeohost-Events is a single guest facing app in hyper-local settings, but especially when a potential guest is planning their journey and wants to see what on the menu!",
+  "subhead": "Your hotel is a Supermarket, Audeohost is your flyer - dining, stage and screen, theatre, and a home away from home, all through a single door. Audeohost-Events is a single guest facing app in hyper-local settings - it can be  especially helpful when a potential guest is planning their journey and wants to see their destination!",
   "moments": [
     {
       "tag": "Dining",
@@ -16,7 +16,7 @@
     {
       "tag": "Meeting rooms",
       "title": "Conference hosting, meeting facilities ",
-      "text": "Names, locations, directions — that is why you're here!"
+      "text": "Names, locations, directions — it's not all fun!"
     },
     {
       "tag": "A wedding",
@@ -37,6 +37,11 @@
       "tag": "The gardens",
       "title": "A walk in the park",
       "text": "Chess in the garden or, just the fresh air!"
+    },
+    {
+      "tag": "The Bar",
+      "title": "Chillax  - I don't have to miss the game",
+      "text": "We only came because we heard ... you might have the game! You've got them all available with sound. 72% of sports fans say the game has to have commentary. Otherwise it is not worth it. "
     }
   ],
   "beatStrip": "This is what Audeohost-Events was built for — not just sport, and not just a hotel's headline event, but a diary of events for customers to look forward to."
