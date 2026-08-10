@@ -163,6 +163,19 @@
   .faq details[open] summary::after { content: "–"; }
   .faq p { margin-top: 10px; color: var(--muted); font-size: 0.92rem; }
 
+  /* testimonials */
+  @media (prefers-reduced-motion: reduce) { .tmarquee { animation: none !important; } }
+  .testimonials { overflow: hidden; padding: clamp(40px, 6vw, 64px) 0; border-top: 1px solid var(--line); }
+  .testimonials .block-head { padding: 0 clamp(20px, 4vw, 40px); max-width: 1160px; margin: 0 auto; }
+  .tmarquee-wrap { margin-top: 8px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .tmarquee { display: flex; gap: 18px; width: max-content; padding: 24px clamp(20px, 4vw, 40px) 4px; animation: tscroll 46s linear infinite; }
+  .tmarquee:hover { animation-play-state: paused; }
+  @keyframes tscroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .tcard { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; width: 320px; flex-shrink: 0; }
+  .tcard .stars { color: var(--gold); letter-spacing: 2px; font-size: 0.85rem; }
+  .tcard p { color: var(--ink); font-size: 0.9rem; margin-top: 10px; }
+  .tcard .attrib { margin-top: 14px; font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
+
   /* final cta */
   .final { background: var(--navy); color: #fff; padding: clamp(56px,9vw,100px) 0; }
   .final h2 { color: #fff; font-size: clamp(1.9rem, 4vw, 3rem); max-width: 18ch; }
@@ -194,7 +207,7 @@
       <a class="link" href="#cases">Use cases</a>
       <a class="link" href="#pricing">Pricing</a>
       <a class="link" href="#faq">FAQ</a>
-      <a class="btn btn-outline" href="#faq">Blog</a>
+      <a class="btn btn-outline" href="blog.html">Blog</a>
       <a class="btn btn-primary" href="#trial">Start 30-day trial</a>
     </div>
   </div>
@@ -408,13 +421,13 @@
       <table class="pricing">
         <thead><tr><th>Product</th><th>Price</th><th>What it does</th></tr></thead>
         <tbody>
-          <tr><td><strong>Audeo-Portal</strong></td><td class="price"><span class="cur">€</span>69.99&nbsp;/mo</td><td>Event promotion, schedules, notifications, venue &amp; location details</td></tr>
+          <tr><td><strong>Audeo-Portal</strong></td><td class="price">from <span class="cur">€</span>69.99&nbsp;/mo</td><td>Event promotion, schedules, notifications, venue &amp; location details</td></tr>
           <tr><td><strong>Audeo-Server</strong></td><td class="price">from <span class="cur">€</span>39.99&nbsp;/mo</td><td>Live TV audio streamed to phones, per screen / zone / channel (4-channel block)</td></tr>
           <tr class="bundle"><td><strong>Recommended bundle</strong></td><td class="price"><span class="cur">€</span>99.99&nbsp;/mo per area</td><td>Portal + Server together — the easiest starting offer</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="price-note">30-day free trial, then €99.99/mo per area. Coming Up / Venue Highlights — menu, specials, what's next — is built into both apps at no extra cost. Audeo-Portal needed to drive it.</p>
+    <p class="price-note">30-day free trial, then <span class="cur">€</span>99.99/mo per area. Coming Up / Venue Highlights — menu, specials, what's next — is built into both apps at no extra cost. Audeo-Portal needed to drive it.</p>
   </div>
 </section>
 
@@ -461,6 +474,29 @@
   </div>
 </section>
 
+<section class="testimonials">
+  <div class="block-head">
+    <span class="eyebrow">From real venues</span>
+    <h2>What operators say</h2>
+  </div>
+  <div class="tmarquee-wrap">
+    <div class="tmarquee">
+      <div class="tcard"><span class="stars">★★★★★</span><p>"Audeohost helps us get ROI from sports programming—customers stay longer and satisfaction is up. We've rolled it out across multiple corporate and franchise locations."</p><div class="attrib">Toronto, Canada — The Frog Pub • Shri P.</div></div>
+      <div class="tcard"><span class="stars">★★★★★</span><p>"Audeohost lets us offer a dedicated in-bar audio feed, so students can enjoy the match or music without background noise—perfect for a mobile-first audience."</p><div class="attrib">UK — Sub • Nick B.</div></div>
+      <div class="tcard"><span class="stars">★★★★★</span><p>"If the venue is muted, loud, or on the wrong game, Audeohost keeps me locked in with the plays and commentary—without killing the atmosphere."</p><div class="attrib">Toronto, Canada — Audeohost user • Chris H.</div></div>
+      <div class="tcard"><span class="stars">★★★★★</span><p>"Audeohost gives venue operators something extra—an edge that improves the customer visit and helps people enjoy the experience more."</p><div class="attrib">Ireland — Pubs &amp; Hotels Group • Finance Director (former)</div></div>
+      <div class="tcard"><span class="stars">★★★★★</span><p>"Customers know what's on before they arrive, and once here, they can catch the commentary—without changing the ambience."</p><div class="attrib">Multiple venues — Audeohost • Venue operators</div></div>
+      <div class="tcard"><span class="stars">★★★★★</span><p>"Sports cost pressures demand fast ROI. Maximising space and dwell time helps us achieve that return."</p><div class="attrib">Venue operators — Audeohost • Operators</div></div>
+      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Audeohost helps us get ROI from sports programming—customers stay longer and satisfaction is up. We've rolled it out across multiple corporate and franchise locations."</p><div class="attrib">Toronto, Canada — The Frog Pub • Shri P.</div></div>
+      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Audeohost lets us offer a dedicated in-bar audio feed, so students can enjoy the match or music without background noise—perfect for a mobile-first audience."</p><div class="attrib">UK — Sub • Nick B.</div></div>
+      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"If the venue is muted, loud, or on the wrong game, Audeohost keeps me locked in with the plays and commentary—without killing the atmosphere."</p><div class="attrib">Toronto, Canada — Audeohost user • Chris H.</div></div>
+      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Audeohost gives venue operators something extra—an edge that improves the customer visit and helps people enjoy the experience more."</p><div class="attrib">Ireland — Pubs &amp; Hotels Group • Finance Director (former)</div></div>
+      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Customers know what's on before they arrive, and once here, they can catch the commentary—without changing the ambience."</p><div class="attrib">Multiple venues — Audeohost • Venue operators</div></div>
+      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Sports cost pressures demand fast ROI. Maximising space and dwell time helps us achieve that return."</p><div class="attrib">Venue operators — Audeohost • Operators</div></div>
+    </div>
+  </div>
+</section>
+
 <section id="trial" class="final">
   <div class="wrap">
     <span class="eyebrow" style="color:#bfe8d4;">Ready when you are</span>
@@ -473,7 +509,7 @@
     <div class="contact">
       <span><strong>Email</strong><span id="regionEmail">tellmemore@audeohost.eu</span></span>
       <span><strong>Phone</strong><span id="regionPhone">(083) 209-4135</span></span>
-      <span><strong>Portal</strong>admin.audeohost.com</span>
+      <span><strong>Audeo-Portal</strong>Provided at signup</span>
     </div>
   </div>
 </section>
