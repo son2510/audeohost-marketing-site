@@ -154,6 +154,29 @@
   .region-btn { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.02em; padding: 8px 16px; border-radius: 999px; border: none; background: transparent; color: var(--muted); cursor: pointer; }
   .region-btn.active { background: var(--navy); color: #fff; font-weight: 600; }
 
+  /* venue enquiry form */
+  .venue-form { margin-top: 40px; max-width: 760px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+  .fld { display: flex; flex-direction: column; gap: 6px; margin-top: 18px; }
+  .form-grid .fld { margin-top: 0; }
+  .fld.full { max-width: 100%; }
+  .fld label { font-family: var(--mono); font-size: 0.76rem; color: var(--muted); }
+  .fld input, .fld select, .fld textarea {
+    font: inherit; font-size: 0.95rem; padding: 10px 12px; border-radius: 8px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  }
+  .fld input:focus, .fld select:focus, .fld textarea:focus { outline: 2px solid var(--emerald); outline-offset: 1px; }
+  .fld textarea { resize: vertical; }
+  .radio-row { display: flex; gap: 20px; padding: 10px 0; }
+  .radio-row label { display: flex; align-items: center; gap: 6px; font-family: var(--body); font-size: 0.95rem; color: var(--ink); }
+  .fld.math { max-width: 200px; }
+  .hp-field { position: absolute; left: -9999px; top: -9999px; }
+  .venue-form .btn { margin-top: 22px; border: none; cursor: pointer; }
+  .form-status { margin-top: 14px; font-size: 0.9rem; min-height: 1.3em; }
+  .form-status.ok { color: var(--emerald); }
+  .form-status.err { color: var(--signal); }
+
   /* faq */
   .faq { margin-top: 36px; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
   .faq details { background: var(--surface); padding: 18px 20px; }
@@ -511,6 +534,75 @@
       <span><strong>Phone</strong><span id="regionPhone">(083) 209-4135</span></span>
       <span><strong>Audeo-Portal</strong>Provided at signup</span>
     </div>
+    <p style="margin-top:28px;"><a href="#form" style="color:rgba(255,255,255,0.75);text-decoration:underline;">Or tell us about your venue and we'll reach out →</a></p>
+  </div>
+</section>
+
+<section id="form" class="block tint">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">Tell us about your venue</span>
+      <h2>Ready to get started? A little detail goes a long way.</h2>
+      <p>Give us your setup and we'll be in touch to plan your trial.</p>
+    </div>
+    <form id="venueForm" class="venue-form" novalidate>
+      <div class="form-grid">
+        <div class="fld"><label for="f-name">Your Name</label><input id="f-name" name="contactName" type="text" required></div>
+        <div class="fld"><label for="f-venue">Venue Name</label><input id="f-venue" name="name" type="text" required></div>
+        <div class="fld"><label for="f-postcode">Postcode</label><input id="f-postcode" name="postcode" type="text" required></div>
+        <div class="fld"><label for="f-phone">Telephone</label><input id="f-phone" name="contactPhone" type="tel" required></div>
+        <div class="fld"><label for="f-email">Email</label><input id="f-email" name="contactEmail" type="email" required></div>
+        <div class="fld">
+          <label for="f-tv">Number of TV Sources</label>
+          <select id="f-tv" name="tvSources" required>
+            <option value="">Select…</option>
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+            <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option><option value="11">10+</option>
+          </select>
+        </div>
+        <div class="fld"><label for="f-tvmodel">Model of TV Sources</label><input id="f-tvmodel" name="modelOfTVSources" type="text" placeholder="e.g. Sky Q, Virgin TV 360" required></div>
+        <div class="fld">
+          <label>Guest Wi-Fi</label>
+          <div class="radio-row">
+            <label><input type="radio" name="hasGuestWifi" value="yes" required> Yes</label>
+            <label><input type="radio" name="hasGuestWifi" value="no"> No</label>
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f-netdist">Distance to Network Port (m)</label>
+          <select id="f-netdist" name="distanceToNetworkPort" required>
+            <option value="">Select…</option>
+            <option value="&lt;1">&lt;1</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+            <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option><option value="10+">10+</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label for="f-powerdist">Distance to Power (m)</label>
+          <select id="f-powerdist" name="distanceToPower" required>
+            <option value="">Select…</option>
+            <option value="&lt;1">&lt;1</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+            <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option><option value="10+">10+</option>
+          </select>
+        </div>
+      </div>
+      <div class="fld full"><label for="f-notes">Other Information</label><textarea id="f-notes" name="notes" rows="3" placeholder="Anything else we should know?"></textarea></div>
+
+      <div class="hp-field" aria-hidden="true">
+        <label for="f-company">Company Website</label>
+        <input id="f-company" name="honeypot" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="fld math"><label for="f-math">What is 3 + 4?</label><input id="f-math" name="mathAnswer" type="number" required></div>
+
+      <button type="submit" class="btn btn-gold" id="formSubmit">Send to Audeohost</button>
+      <p id="formStatus" class="form-status" role="status"></p>
+    </form>
   </div>
 </section>
 
@@ -558,6 +650,7 @@
     document.querySelectorAll('.region-btn').forEach(function(btn){
       btn.classList.toggle('active', btn.dataset.region === key);
     });
+    window.__currentRegion = key;
     try { localStorage.setItem('audeohostRegion', key); } catch(e) {}
   }
 
@@ -568,4 +661,59 @@
   var savedRegion = 'eu';
   try { savedRegion = localStorage.getItem('audeohostRegion') || 'eu'; } catch(e) {}
   applyRegion(savedRegion);
+
+  var REGION_API_CODE = { eu: 'IE', uk: 'UK', ca: 'CA' };
+  var venueForm = document.getElementById('venueForm');
+  if (venueForm) {
+    venueForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = e.target;
+      var statusEl = document.getElementById('formStatus');
+      var submitBtn = document.getElementById('formSubmit');
+      var wifi = form.querySelector('input[name="hasGuestWifi"]:checked');
+
+      var payload = {
+        contactName: form.contactName.value.trim(),
+        name: form.name.value.trim(),
+        postcode: form.postcode.value.trim(),
+        contactPhone: form.contactPhone.value.trim(),
+        contactEmail: form.contactEmail.value.trim(),
+        tvSources: Number(form.tvSources.value),
+        modelOfTVSources: form.modelOfTVSources.value.trim(),
+        hasGuestWifi: wifi ? wifi.value === 'yes' : false,
+        distanceToNetworkPort: form.distanceToNetworkPort.value,
+        distanceToPower: form.distanceToPower.value,
+        notes: form.notes.value.trim(),
+        enquiryRegion: REGION_API_CODE[window.__currentRegion || 'eu'] || 'IE',
+        honeypot: form.honeypot.value,
+        mathAnswer: Number(form.mathAnswer.value)
+      };
+
+      submitBtn.disabled = true;
+      statusEl.textContent = 'Sending…';
+      statusEl.className = 'form-status';
+
+      fetch('https://apadmin.audeohost.com/api/venues/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function(res){
+        if (!res.ok) {
+          return res.json().catch(function(){ return {}; }).then(function(body){
+            throw new Error((body && body.message) || 'Something went wrong');
+          });
+        }
+        return res.json();
+      }).then(function(data){
+        statusEl.textContent = (data && data.message) || "Thanks — we'll be in touch shortly.";
+        statusEl.className = 'form-status ok';
+        form.reset();
+      }).catch(function(err){
+        statusEl.textContent = (err && err.message) || 'Something went wrong — please try again or email us directly.';
+        statusEl.className = 'form-status err';
+      }).finally(function(){
+        submitBtn.disabled = false;
+      });
+    });
+  }
 </script>
