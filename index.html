@@ -640,7 +640,7 @@
 
   function applyRegion(key) {
     var r = REGIONS[key] || REGIONS.eu;
-    document.querySelectorAll('.price .cur').forEach(function(el){ el.textContent = r.currency; });
+    document.querySelectorAll('.cur').forEach(function(el){ el.textContent = r.currency; });
     var emailEl = document.getElementById('regionEmail');
     var phoneEl = document.getElementById('regionPhone');
     var cta = document.getElementById('trialCta');
