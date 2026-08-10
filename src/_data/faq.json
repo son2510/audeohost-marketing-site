@@ -18,7 +18,7 @@
     },
     {
       "question": "Do we need special hardware?",
-      "answer": "Audeo-Server uses a small on-site device. We confirm exactly what's needed during the site survey and keep the install as compact as possible."
+      "answer": "Audeo-Server is a small on-site device to manage channel audio. We confirm exactly what's needed during the site survey and keep the install as compact as possible."
     },
     {
       "question": "Does the audio work outside the venue?",
