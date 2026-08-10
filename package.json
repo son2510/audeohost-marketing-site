@@ -1,0 +1,26 @@
+{
+  "name": "audeohost-marketing-site",
+  "version": "1.0.0",
+  "description": "Product-supportive marketing site for Audeohost — venue engagement platform (live TV audio to a guest's own phone, plus sport and non-sport event discovery, over one Portal).",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/son2510/audeohost-marketing-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/son2510/audeohost-marketing-site/issues"
+  },
+  "homepage": "https://github.com/son2510/audeohost-marketing-site#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}
