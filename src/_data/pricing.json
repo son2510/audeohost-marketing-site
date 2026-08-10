@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "label": "Audeo-Portal",
+      "priceFrom": true,
+      "price": "69.99",
+      "period": "/mo",
+      "bundle": false,
+      "description": "Event promotion, schedules, notifications, venue &amp; location details"
+    },
+    {
+      "label": "Audeo-Server",
+      "priceFrom": true,
+      "price": "39.99",
+      "period": "/mo",
+      "bundle": false,
+      "description": "Live TV audio streamed to phones, per screen / zone / channel (4-channel block)"
+    },
+    {
+      "label": "Recommended bundle",
+      "priceFrom": false,
+      "price": "99.99",
+      "period": "/mo per area",
+      "bundle": true,
+      "description": "Portal + Server together — the easiest starting offer"
+    }
+  ],
+  "trialNoteSuffix": "/mo per area. Coming Up / Venue Highlights — menu, specials, what's next — is built into both apps at no extra cost. Audeo-Portal needed to drive it."
+}

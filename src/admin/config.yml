@@ -37,3 +37,68 @@ collections:
         }
       - { label: "Tags", name: "tagList", widget: "list", default: [] }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "site-data"
+    label: "Site Content"
+    files:
+      - name: "pricing"
+        label: "Pricing"
+        file: "src/_data/pricing.json"
+        fields:
+          - label: "Rows"
+            name: "rows"
+            widget: "list"
+            fields:
+              - { label: "Product name", name: "label", widget: "string" }
+              - { label: "Show \"from\" before the price", name: "priceFrom", widget: "boolean", default: true }
+              - { label: "Price", name: "price", widget: "string", hint: "Number only, e.g. 69.99 — currency symbol is added automatically per region" }
+              - { label: "Period", name: "period", widget: "string", hint: "e.g. /mo or /mo per area" }
+              - { label: "Highlight as the recommended bundle", name: "bundle", widget: "boolean", default: false }
+              - { label: "Description", name: "description", widget: "string" }
+          - {
+              label: "Trial note (text after the bundle price)",
+              name: "trialNoteSuffix",
+              widget: "text",
+            }
+
+      - name: "regions"
+        label: "Regions"
+        file: "src/_data/regions.json"
+        fields:
+          - label: "Regions"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Key", name: "key", widget: "string", hint: "Short code, e.g. eu, uk, ca — do not change on an existing region" }
+              - { label: "Button Label", name: "label", widget: "string" }
+              - { label: "Currency Symbol", name: "currency", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - {
+                  label: "Enquiry Form Country Code",
+                  name: "enquiryApiCode",
+                  widget: "string",
+                  hint: "IE, UK, or CA — controls postcode format validation on the enquiry form",
+                }
+
+      - name: "faq"
+        label: "FAQ"
+        file: "src/_data/faq.json"
+        fields:
+          - label: "Questions"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+      - name: "testimonials"
+        label: "Testimonials"
+        file: "src/_data/testimonials.json"
+        fields:
+          - label: "Quotes"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Attribution", name: "attribution", widget: "string", hint: "e.g. Toronto, Canada — The Frog Pub • Shri P." }

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "key": "eu",
+      "label": "EU",
+      "currency": "€",
+      "email": "tellmemore@audeohost.eu",
+      "phone": "(083) 209-4135",
+      "enquiryApiCode": "IE"
+    },
+    {
+      "key": "uk",
+      "label": "UK",
+      "currency": "£",
+      "email": "tellmemore@audeohost.co.uk",
+      "phone": "(020) 3384-5300",
+      "enquiryApiCode": "UK"
+    },
+    {
+      "key": "ca",
+      "label": "Canada",
+      "currency": "C$",
+      "email": "tellmemore@audeohost.ca",
+      "phone": "(647) 479-2847",
+      "enquiryApiCode": "CA"
+    }
+  ]
+}

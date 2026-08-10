@@ -439,21 +439,21 @@ permalink: "{{ page.filePathStem }}.html"
       <p>Same price, your region's currency and contact details — pick yours below.</p>
     </div>
     <div class="region-switch" role="group" aria-label="Choose your region">
-      <button type="button" class="region-btn" data-region="eu">EU</button>
-      <button type="button" class="region-btn" data-region="uk">UK</button>
-      <button type="button" class="region-btn" data-region="ca">Canada</button>
+      {%- for r in regions.items %}
+      <button type="button" class="region-btn" data-region="{{ r.key }}">{{ r.label }}</button>
+      {%- endfor %}
     </div>
     <div class="pricing-wrap">
       <table class="pricing">
         <thead><tr><th>Product</th><th>Price</th><th>What it does</th></tr></thead>
         <tbody>
-          <tr><td><strong>Audeo-Portal</strong></td><td class="price">from <span class="cur">€</span>69.99&nbsp;/mo</td><td>Event promotion, schedules, notifications, venue &amp; location details</td></tr>
-          <tr><td><strong>Audeo-Server</strong></td><td class="price">from <span class="cur">€</span>39.99&nbsp;/mo</td><td>Live TV audio streamed to phones, per screen / zone / channel (4-channel block)</td></tr>
-          <tr class="bundle"><td><strong>Recommended bundle</strong></td><td class="price"><span class="cur">€</span>99.99&nbsp;/mo per area</td><td>Portal + Server together — the easiest starting offer</td></tr>
+          {%- for row in pricing.rows %}
+          <tr{% if row.bundle %} class="bundle"{% endif %}><td><strong>{{ row.label }}</strong></td><td class="price">{% if row.priceFrom %}from {% endif %}<span class="cur">€</span>{{ row.price }}&nbsp;{{ row.period }}</td><td>{{ row.description | safe }}</td></tr>
+          {%- endfor %}
         </tbody>
       </table>
     </div>
-    <p class="price-note">30-day free trial, then <span class="cur">€</span>99.99/mo per area. Coming Up / Venue Highlights — menu, specials, what's next — is built into both apps at no extra cost. Audeo-Portal needed to drive it.</p>
+    <p class="price-note">30-day free trial, then <span class="cur">€</span>{{ pricing.rows[2].price }}{{ pricing.trialNoteSuffix | safe }}</p>
   </div>
 </section>
 
@@ -464,38 +464,12 @@ permalink: "{{ page.filePathStem }}.html"
       <h2>Before you call</h2>
     </div>
     <div class="faq">
+      {%- for item in faq.items %}
       <details>
-        <summary>Do customers need an app?</summary>
-        <p>Yes. Audeohost-Events (events &amp; sound) and Audeohost-Live (sound only) are both free on the App Store and Google Play. Guests scan a table QR code and are listening in seconds.</p>
+        <summary>{{ item.question | safe }}</summary>
+        <p>{{ item.answer | safe }}</p>
       </details>
-      <details>
-        <summary>How long does setup take?</summary>
-        <p>The Audeo-Portal can be configured in under two hours. Audeo-Server may need a short on-site visit to confirm Wi-Fi, cabling and screen layout.</p>
-      </details>
-      <details>
-        <summary>Can we keep house speakers low but still offer commentary?</summary>
-        <p>Yes. Guests hear full commentary in the app while your house volume stays wherever your policy sets it.</p>
-      </details>
-      <details>
-        <summary>Can different tables listen to different matches?</summary>
-        <p>Yes. Each guest picks their own audio feed in the app, so multiple games run side-by-side without commentary clashing.</p>
-      </details>
-      <details>
-        <summary>Do we need special hardware?</summary>
-        <p>Audeo-Server uses a small on-site device. We confirm exactly what's needed during the site survey and keep the install as compact as possible.</p>
-      </details>
-      <details>
-        <summary>Does the audio work outside the venue?</summary>
-        <p>No — by design. Audio is delivered over your venue's own Wi-Fi, never over cellular and never off-premises. That keeps it a genuine in-venue perk, not something guests get for free from the car park.</p>
-      </details>
-      <details>
-        <summary>Does this help hard-of-hearing guests?</summary>
-        <p>Yes. Because audio goes straight to a guest's own phone and their own earbuds, it's functionally a personal hearing aid in a loud bar or a large auditorium — clearer than straining to hear a house speaker from the back of the room.</p>
-      </details>
-      <details>
-        <summary>Can Audeohost connect to our POS or ticketing system?</summary>
-        <p>Tell us what you need. We'll talk through pulling menu and specials data from your POS, or handing off to your ticketing system so a guest can book a seat for a bigger show — the right integration depends on what you're already running.</p>
-      </details>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -507,18 +481,12 @@ permalink: "{{ page.filePathStem }}.html"
   </div>
   <div class="tmarquee-wrap">
     <div class="tmarquee">
-      <div class="tcard"><span class="stars">★★★★★</span><p>"Audeohost helps us get ROI from sports programming—customers stay longer and satisfaction is up. We've rolled it out across multiple corporate and franchise locations."</p><div class="attrib">Toronto, Canada — The Frog Pub • Shri P.</div></div>
-      <div class="tcard"><span class="stars">★★★★★</span><p>"Audeohost lets us offer a dedicated in-bar audio feed, so students can enjoy the match or music without background noise—perfect for a mobile-first audience."</p><div class="attrib">UK — Sub • Nick B.</div></div>
-      <div class="tcard"><span class="stars">★★★★★</span><p>"If the venue is muted, loud, or on the wrong game, Audeohost keeps me locked in with the plays and commentary—without killing the atmosphere."</p><div class="attrib">Toronto, Canada — Audeohost user • Chris H.</div></div>
-      <div class="tcard"><span class="stars">★★★★★</span><p>"Audeohost gives venue operators something extra—an edge that improves the customer visit and helps people enjoy the experience more."</p><div class="attrib">Ireland — Pubs &amp; Hotels Group • Finance Director (former)</div></div>
-      <div class="tcard"><span class="stars">★★★★★</span><p>"Customers know what's on before they arrive, and once here, they can catch the commentary—without changing the ambience."</p><div class="attrib">Multiple venues — Audeohost • Venue operators</div></div>
-      <div class="tcard"><span class="stars">★★★★★</span><p>"Sports cost pressures demand fast ROI. Maximising space and dwell time helps us achieve that return."</p><div class="attrib">Venue operators — Audeohost • Operators</div></div>
-      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Audeohost helps us get ROI from sports programming—customers stay longer and satisfaction is up. We've rolled it out across multiple corporate and franchise locations."</p><div class="attrib">Toronto, Canada — The Frog Pub • Shri P.</div></div>
-      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Audeohost lets us offer a dedicated in-bar audio feed, so students can enjoy the match or music without background noise—perfect for a mobile-first audience."</p><div class="attrib">UK — Sub • Nick B.</div></div>
-      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"If the venue is muted, loud, or on the wrong game, Audeohost keeps me locked in with the plays and commentary—without killing the atmosphere."</p><div class="attrib">Toronto, Canada — Audeohost user • Chris H.</div></div>
-      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Audeohost gives venue operators something extra—an edge that improves the customer visit and helps people enjoy the experience more."</p><div class="attrib">Ireland — Pubs &amp; Hotels Group • Finance Director (former)</div></div>
-      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Customers know what's on before they arrive, and once here, they can catch the commentary—without changing the ambience."</p><div class="attrib">Multiple venues — Audeohost • Venue operators</div></div>
-      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"Sports cost pressures demand fast ROI. Maximising space and dwell time helps us achieve that return."</p><div class="attrib">Venue operators — Audeohost • Operators</div></div>
+      {%- for t in testimonials.items %}
+      <div class="tcard"><span class="stars">★★★★★</span><p>"{{ t.quote | safe }}"</p><div class="attrib">{{ t.attribution | safe }}</div></div>
+      {%- endfor %}
+      {%- for t in testimonials.items %}
+      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"{{ t.quote | safe }}"</p><div class="attrib">{{ t.attribution | safe }}</div></div>
+      {%- endfor %}
     </div>
   </div>
 </section>
@@ -635,14 +603,10 @@ permalink: "{{ page.filePathStem }}.html"
     root.setAttribute('data-theme', next);
   });
 
-  var REGIONS = {
-    eu: { currency: '€', email: 'tellmemore@audeohost.eu', phone: '(083) 209-4135' },
-    uk: { currency: '£', email: 'tellmemore@audeohost.co.uk', phone: '(020) 3384-5300' },
-    ca: { currency: 'C$', email: 'tellmemore@audeohost.ca', phone: '(647) 479-2847' }
-  };
+  var REGIONS = {{ regions.items | json | safe }};
 
   function applyRegion(key) {
-    var r = REGIONS[key] || REGIONS.eu;
+    var r = REGIONS.find(function(x){ return x.key === key; }) || REGIONS[0];
     document.querySelectorAll('.cur').forEach(function(el){ el.textContent = r.currency; });
     var emailEl = document.getElementById('regionEmail');
     var phoneEl = document.getElementById('regionPhone');
@@ -665,7 +629,7 @@ permalink: "{{ page.filePathStem }}.html"
   try { savedRegion = localStorage.getItem('audeohostRegion') || 'eu'; } catch(e) {}
   applyRegion(savedRegion);
 
-  var REGION_API_CODE = { eu: 'IE', uk: 'UK', ca: 'CA' };
+  var REGION_API_CODE = REGIONS.reduce(function(acc, r){ acc[r.key] = r.enquiryApiCode; return acc; }, {});
   var venueForm = document.getElementById('venueForm');
   if (venueForm) {
     venueForm.addEventListener('submit', function(e){
