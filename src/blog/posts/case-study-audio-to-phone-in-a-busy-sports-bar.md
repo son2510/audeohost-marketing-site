@@ -1,7 +1,4 @@
 ---
-layout: post.njk
-permalink: "blog/posts/{{ page.fileSlug }}.html"
-tags: ["post"]
 date: 2026-07-29
 title: "Case study: Audio to phone in a busy multi-screen sports bar"
 eyebrow: "Case study · Multi-screen · Operations"

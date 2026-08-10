@@ -1,7 +1,4 @@
 ---
-layout: post.njk
-permalink: "blog/posts/{{ page.fileSlug }}.html"
-tags: ["post"]
 date: 2026-07-28
 title: "Case study: Quiet lounge, clear commentary, happier customers"
 eyebrow: "Case study · Noise limits · Premium experience"

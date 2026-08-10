@@ -1,7 +1,4 @@
 ---
-layout: post.njk
-permalink: "blog/posts/{{ page.fileSlug }}.html"
-tags: ["post"]
 date: 2026-07-31
 title: "Why sports bars lose customers when they can't hear the commentary"
 eyebrow: "Guide · Matchday experience · In-venue audio"

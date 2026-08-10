@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: son2510/audeohost-marketing-site
+  branch: main
+  base_url: https://apadmin.audeohost.com
+  auth_endpoint: api/auth
+
+publish_mode: simple
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/blog/posts"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Eyebrow",
+          name: "eyebrow",
+          widget: "string",
+          hint: "Small label above the title on the post page and its listing card, e.g. \"Guide · Matchday experience · In-venue audio\"",
+        }
+      - {
+          label: "Excerpt",
+          name: "excerpt",
+          widget: "text",
+          hint: "Shown as the summary on the blog listing page",
+        }
+      - { label: "Tags", name: "tagList", widget: "list", default: [] }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -1,7 +1,4 @@
 ---
-layout: post.njk
-permalink: "blog/posts/{{ page.fileSlug }}.html"
-tags: ["post"]
 date: 2026-07-27
 title: "Matchday checklist for multi-screen venues"
 eyebrow: "Checklist · Staff-ready · Peak times"

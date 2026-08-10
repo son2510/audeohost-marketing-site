@@ -1,7 +1,4 @@
 ---
-layout: post.njk
-permalink: "blog/posts/{{ page.fileSlug }}.html"
-tags: ["post"]
 date: 2026-07-30
 title: "How to promote venue events without living on social media"
 eyebrow: "Guide · Event promotion · Hospitality marketing"
