@@ -1,0 +1,22 @@
+{
+  "eyebrow": "The problem",
+  "heading": "You already paid for the room's attention. It's leaking out anyway.",
+  "subhead": "Between the meeting that ran long, the second screen nobody can hear, and the Tuesday quiz night nobody knew was on — venues lose guests to friction, not to a lack of things worth staying for.",
+  "cards": [
+    {
+      "tag": "Hotels &amp; entertainment hubs",
+      "title": "The show's on. Nobody in the bar knows.",
+      "text": "Dinner &amp; a show, poolside sets and function rooms live on different signs — front desk becomes the wayfinding desk, and guests never discover the dining room, the late bar, or what's on in your auditorium."
+    },
+    {
+      "tag": "Bars &amp; live sport",
+      "title": "One speaker system, four kick-offs",
+      "text": "Only one match gets the house sound. Silent commentary reads as low energy, and fans of the \"other\" game leave for somewhere where they can connect."
+    },
+    {
+      "tag": "In-house entertainment",
+      "title": "Nobody knew it was on",
+      "text": "Trivia, music and comedy live and die on a poster. Locals need a reason to check, not just a reason to come — and marketing gets scattered across three apps you don't own."
+    }
+  ]
+}

@@ -41,10 +41,217 @@ collections:
   - name: "site-data"
     label: "Site Content"
     files:
+      - name: "nav"
+        label: "Navigation"
+        file: "src/_data/nav.json"
+        fields:
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link (e.g. #how or a page URL)", name: "href", widget: "string" }
+          - label: "Blog button"
+            name: "blogButton"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "href", widget: "string" }
+          - label: "Trial CTA button"
+            name: "trialButton"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "href", widget: "string" }
+
+      - name: "hero"
+        label: "Hero"
+        file: "src/_data/hero.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - {
+              label: "Headline",
+              name: "headline",
+              widget: "text",
+              hint: "HTML allowed, e.g. <br> for a line break and <em>...</em> for the emphasised line",
+            }
+          - { label: "Subhead", name: "lede", widget: "text" }
+          - label: "Call-to-action buttons"
+            name: "ctas"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "href", widget: "string" }
+              - { label: "Style", name: "style", widget: "select", options: ["gold", "outline"] }
+          - label: "Proof points"
+            name: "proof"
+            widget: "list"
+            fields:
+              - { label: "Highlighted word", name: "stat", widget: "string" }
+              - { label: "Rest of the phrase", name: "text", widget: "string" }
+
+      - name: "problem"
+        label: "The Problem section"
+        file: "src/_data/problem.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+      - name: "hotelOps"
+        label: "One App, Whole Property section"
+        file: "src/_data/hotelOps.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - label: "Moments"
+            name: "moments"
+            widget: "list"
+            fields:
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - { label: "Closing strip", name: "beatStrip", widget: "text" }
+
+      - name: "fanzo"
+        label: "Competitive (Fanzo) section"
+        file: "src/_data/fanzo.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - label: "Beats"
+            name: "beats"
+            widget: "list"
+            fields:
+              - { label: "Style", name: "style", widget: "select", options: ["beyond", "with", "own"] }
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - { label: "Closing strip", name: "beatStrip", widget: "text" }
+
+      - name: "how"
+        label: "How It Works section"
+        file: "src/_data/how.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            hint: "Numbered automatically in order — reorder the list to renumber"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+      - name: "platform"
+        label: "The Platform (two apps) section"
+        file: "src/_data/platform.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - { label: "Closing strip", name: "beatStrip", widget: "text" }
+
+      - name: "cases"
+        label: "Use Cases section"
+        file: "src/_data/cases.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - label: "Cards"
+            name: "cards"
+            widget: "list"
+            fields:
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "List items", name: "items", widget: "list" }
+
+      - name: "roi"
+        label: "ROI Argument section"
+        file: "src/_data/roi.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - label: "Contrast cards"
+            name: "contrast"
+            widget: "list"
+            fields:
+              - { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - { label: "Closing strip", name: "beatStrip", widget: "text" }
+
+      - name: "finalCta"
+        label: "Final CTA section"
+        file: "src/_data/finalCta.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - { label: "Primary button label", name: "primaryCtaLabel", widget: "string" }
+          - label: "Demo button"
+            name: "demoCta"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "href", widget: "string" }
+          - label: "Contact labels"
+            name: "contactLabels"
+            widget: "object"
+            fields:
+              - { label: "\"Email\" label", name: "email", widget: "string" }
+              - { label: "\"Phone\" label", name: "phone", widget: "string" }
+              - { label: "\"Audeo-Portal\" label", name: "portalLabel", widget: "string" }
+              - { label: "Portal value text", name: "portalValue", widget: "string" }
+          - { label: "Link to the venue-enquiry form", name: "formLinkText", widget: "string" }
+
+      - name: "venueFormSection"
+        label: "Venue Enquiry Form intro"
+        file: "src/_data/venueFormSection.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
+          - { label: "Submit button label", name: "submitLabel", widget: "string" }
+
+      - name: "footer"
+        label: "Footer"
+        file: "src/_data/footer.json"
+        fields:
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "href", widget: "string" }
+          - { label: "Copyright line", name: "copyright", widget: "string" }
+
       - name: "pricing"
         label: "Pricing"
         file: "src/_data/pricing.json"
         fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Subhead", name: "subhead", widget: "text" }
           - label: "Rows"
             name: "rows"
             widget: "list"
@@ -85,6 +292,8 @@ collections:
         label: "FAQ"
         file: "src/_data/faq.json"
         fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
           - label: "Questions"
             name: "items"
             widget: "list"
@@ -96,6 +305,8 @@ collections:
         label: "Testimonials"
         file: "src/_data/testimonials.json"
         fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
           - label: "Quotes"
             name: "items"
             widget: "list"

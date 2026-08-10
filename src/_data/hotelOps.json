@@ -1,0 +1,15 @@
+{
+  "eyebrow": "One app, the whole property",
+  "heading": "Dinner's at 7. The band's on at 8. Aqua-aerobics is at 9 tomorrow. One app finds all of it.",
+  "subhead": "A hotel isn't one venue — it's a dozen: dining, a stage, meeting rooms, a gym, a pool, gardens, wedding spaces. Audeohost-Events is the single guest-facing map across all of it, without stepping into what happens inside any specific room.",
+  "moments": [
+    { "tag": "Dining", "title": "Tonight's menu, and the walk to the restaurant", "text": "Dinner service, the dining room, or room service — mapped, not guessed at" },
+    { "tag": "The stage", "title": "What's on in the auditorium tonight, and for weeks ahead", "text": "Show, start time, and which room — content stays the organiser's" },
+    { "tag": "Meeting rooms", "title": "Which room, and how to get there", "text": "Names, locations, directions — never the session content itself" },
+    { "tag": "A wedding", "title": "Ceremony in the Rose Garden, wine reception in the Terrace Room", "text": "Each part of the day, easy directions, for guests who've never been before" },
+    { "tag": "The pool", "title": "Tomorrow's 9am aqua-aerobics class", "text": "Time, location, and a reason to set an alarm" },
+    { "tag": "The gym", "title": "Today's group workout session", "text": "On the schedule with everything else in the building" },
+    { "tag": "The gardens", "title": "A self-guided garden walk", "text": "Tell guest where to find it for the guest who just wants some air" }
+  ],
+  "beatStrip": "This is what Audeohost-Events was built for — not just sport, and not just a hotel's headline event, but a diary of events for customers to look forward to."
+}

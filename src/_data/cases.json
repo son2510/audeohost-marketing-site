@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Same platform, every area",
+  "heading": "One Portal, three teams, zero duplicated work",
+  "subhead": "Marketing publishes once in the Audeo-Portal, up to 30 days ahead. Every guest — auditorium show-goer, regular or first-time local — sees the version relevant to them.",
+  "cards": [
+    {
+      "tag": "A · Hotels as entertainment hubs",
+      "title": "We don't run room 4. We tell you where it is.",
+      "items": [
+        "Function room and stage-show names, locations and directions — content stays the organiser's call",
+        "Dinner menus, food halls and what else is on at the hotel",
+        "Cross-promotion across the property — live music in the Music Room while the game's on at the bar",
+        "Running a show in the auditorium? Market it up to a month ahead, not just the day of"
+      ]
+    },
+    {
+      "tag": "B · Bar &amp; leisure spaces",
+      "title": "Every fixture, every zone",
+      "items": [
+        "Live sport listings across channels",
+        "Comedy, music and trivia schedules",
+        "\"What's on tonight\" discovery"
+      ]
+    },
+    {
+      "tag": "C · Operations &amp; marketing",
+      "title": "One source of truth",
+      "items": [
+        "Fewer interruptions at the front desk",
+        "Promote the quiet Tuesday, not just Saturday",
+        "Menus, offers and house rules in the same place",
+        "Tell us what to hand off to — POS for menus and specials, ticketing for bookings"
+      ]
+    }
+  ]
+}

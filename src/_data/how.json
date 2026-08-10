@@ -1,0 +1,12 @@
+{
+  "eyebrow": "How it works",
+  "heading": "Discover, go, listen — the same three taps everywhere in the venue",
+  "subhead": "One platform runs the whole guest journey, from a guest looking for room 4 to a fan looking for kick-off.",
+  "steps": [
+    { "title": "Discover", "text": "Guest opens the app and sees what's on — session, match or set list, today, and beyond." },
+    { "title": "Choose", "text": "They pick the session, the fixture, or the entertainment night that's relevant to them." },
+    { "title": "Go", "text": "Clear room, bar or zone details remove the \"where do I even stand\" friction." },
+    { "title": "Listen", "text": "For TV events, they tune their phone to the right channel. Sound follows them, not the wall." },
+    { "title": "Stay", "text": "More reasons to stay on-site — and more reasons to come back next Tuesday." }
+  ]
+}

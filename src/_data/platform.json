@@ -1,0 +1,18 @@
+{
+  "eyebrow": "The platform",
+  "heading": "Two focused apps. One reason: speed for the person who just wants the game.",
+  "subhead": "A fan walking in for the second half doesn't want a discovery platform — they want sound in eight seconds. A guest planning tonight wants the whole calendar. Audeohost builds for both instead of compromising on either.",
+  "cards": [
+    {
+      "tag": "Audeohost-Live · free",
+      "title": "The \"I just want the game\" app",
+      "text": "No account, no backend — connect to the venue's Wi-Fi and pick a channel. Built for the walk-in fan, low battery and all, with Coming Up / Venue Highlights under the player for menu, specials and what's next."
+    },
+    {
+      "tag": "Audeohost-Events · free",
+      "title": "The \"what's on tonight\" app",
+      "text": "Full venue discovery — agendas, fixtures, in-house nights, directions — with live audio and the same Coming Up / Venue Highlights promotion built in. Favourite a venue once, see everything it schedules from then on."
+    }
+  ],
+  "beatStrip": "Behind both apps: Audeo-Server — your sound. Audeo-Portal — your team publishes every event; your guest has the rest in Audeohost-Events."
+}

@@ -1,0 +1,10 @@
+{
+  "links": [
+    { "label": "How it works", "href": "#how" },
+    { "label": "Use cases", "href": "#cases" },
+    { "label": "Pricing", "href": "#pricing" },
+    { "label": "FAQ", "href": "#faq" }
+  ],
+  "blogButton": { "label": "Blog", "href": "blog.html" },
+  "trialButton": { "label": "Start 30-day trial", "href": "#trial" }
+}

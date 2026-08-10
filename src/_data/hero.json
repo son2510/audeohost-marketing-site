@@ -1,0 +1,14 @@
+{
+  "eyebrow": "Venue engagement platform",
+  "headline": "Every event has an audience.<br><em>Every screen has sound.</em>",
+  "lede": "Audeohost's Business to Customer (B2C) engagement platform gives you the tools to connect with customers, both current and new, in planning their entertainment journey, whether it’s a night out or weekend away. You’ve booked the artists and paid to have live TV sport, getting the word out, and focused on your venue is where Audeohost lives, whether it’s a meeting or midweek event, nothing in your building goes unheard or unnoticed.",
+  "ctas": [
+    { "label": "Start your 30-day trial →", "href": "#trial", "style": "gold" },
+    { "label": "See how it works", "href": "#how", "style": "outline" }
+  ],
+  "proof": [
+    { "stat": "No", "text": "building works" },
+    { "stat": "Local", "text": "currency pricing" },
+    { "stat": "Live", "text": "in under a week" }
+  ]
+}
