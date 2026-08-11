@@ -1,7 +1,24 @@
 ---
 permalink: "{{ page.filePathStem }}.html"
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Audeohost</title>
+<meta name="description" content="Audeohost's privacy policy — how we collect, use and protect your data across the Audeohost apps and Audeo-Portal.">
+<link rel="canonical" href="{{ site.url }}/privacy-policy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="Privacy Policy — Audeohost">
+<meta property="og:description" content="Audeohost's privacy policy — how we collect, use and protect your data across the Audeohost apps and Audeo-Portal.">
+<meta property="og:url" content="{{ site.url }}/privacy-policy.html">
+<meta property="og:image" content="{{ site.url }}/{{ site.ogImage }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Policy — Audeohost">
+<meta name="twitter:description" content="Audeohost's privacy policy — how we collect, use and protect your data across the Audeohost apps and Audeo-Portal.">
+<meta name="twitter:image" content="{{ site.url }}/{{ site.ogImage }}">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/favicon-32x32.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -71,6 +88,8 @@ permalink: "{{ page.filePathStem }}.html"
   .foot-row a:hover { color: var(--ink); }
   .foot-links { display: flex; gap: 18px; flex-wrap: wrap; }
 </style>
+</head>
+<body>
 
 <button class="theme-toggle" id="themeToggle" type="button">◐ theme</button>
 
@@ -280,3 +299,5 @@ permalink: "{{ page.filePathStem }}.html"
     root.setAttribute('data-theme', next);
   });
 </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://son2510.github.io/audeohost-marketing-site/sitemap.xml
