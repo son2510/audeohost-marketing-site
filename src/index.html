@@ -105,9 +105,8 @@ permalink: "{{ page.filePathStem }}.html"
   /* section rhythm */
   section.block { padding: clamp(52px, 8vw, 96px) 0; border-top: 1px solid var(--line); }
   section.block.tint { background: var(--paper-dim); }
-  .block-head { max-width: 62ch; }
   .block-head h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); margin-top: 10px; }
-  .block-head p { margin-top: 14px; color: var(--muted); font-size: 1.02rem; }
+  .block-head p { margin-top: 14px; color: var(--muted); font-size: 1.02rem; max-width: 62ch; }
 
   .cards3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
   .cards2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 40px; }
@@ -141,7 +140,7 @@ permalink: "{{ page.filePathStem }}.html"
   .beat-card.own .beat-tag { color: var(--navy); }
   .beat-card h3 { font-size: 1.16rem; margin-top: 10px; }
   .beat-card p { color: var(--muted); font-size: 0.92rem; margin-top: 12px; }
-  .beat-strip { border-left: 3px solid var(--emerald); padding-left: 16px; margin-top: 30px; font-size: 1.02rem; max-width: 58ch; }
+  .beat-strip { border-left: 3px solid var(--emerald); padding-left: 16px; margin-top: 30px; font-size: 1.02rem; }
 
   .roi-contrast { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
   @media (max-width: 860px) { .roi-contrast { grid-template-columns: 1fr; } }
