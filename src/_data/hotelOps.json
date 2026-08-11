@@ -1,21 +1,21 @@
 {
-  "eyebrow": "One app, the whole property",
-  "heading": "Dinner's at 7. The band's on at 8. Aqua-aerobics is at 9 tomorrow. One app finds all of it.",
-  "subhead": "Your hotel is a Hospitality Lifestyle Hub, Audeohost is your flyer - dining, stage and screen, theatre, and a home away from home, all through a single door. Audeohost-Events is a single guest facing app in hyper-local settings - it can be  especially helpful when a potential guest is planning their journey and wants to see their destination!",
+  "eyebrow": "What Audeohost Does",
+  "heading": "Package → Promote → Discover → Experience",
+  "subhead": "Your existing services become events. Audeohost publishes them locally, helps customers discover what's relevant, and keeps them connected once they're in the venue.",
   "moments": [
-    {
-      "tag": "The Bar",
-      "title": "Chillax at the Bar  - I don't have to miss the game",
-      "text": "I only came because we heard ... you might have the game! You've got them all available with sound. 72% of sports fans say the game has to have commentary. Otherwise, it is not worth it. "
-    },
     {
       "tag": "Dining",
       "title": "The menu, the restaurants",
-      "text": "Sophisticated dining - or casual fare"
+      "text": "Sophisticated dining - or casual fare. Promoting your dining as an event gives it a certain level of sophistication in itself. It is an experience, not to be missed."
     },
     {
-      "tag": "The stage",
-      "title": "Your latest production in the auditorium, the next in line",
+      "tag": "The Bar",
+      "title": "Hospitality Hub",
+      "text": "A great place to relax with friends and equally, a great place to catch the match.\nWhere a game is available with sound. Sports fans say the game is 65% better with commentary. They will be back again if they know there is commentary. "
+    },
+    {
+      "tag": "Entertainment",
+      "title": "Entertainment - Casual or ",
       "text": "Promote your latest shows, a note from the producer - whet the appetite! "
     },
     {
