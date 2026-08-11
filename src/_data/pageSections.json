@@ -38,7 +38,7 @@
     },
     {
       "key": "faq",
-      "visible": true
+      "visible": false
     },
     {
       "key": "testimonials",
