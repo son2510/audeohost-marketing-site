@@ -1,17 +1,56 @@
 {
   "items": [
-    { "key": "hero", "visible": true },
-    { "key": "problem", "visible": true },
-    { "key": "hotel-ops", "visible": true },
-    { "key": "fanzo", "visible": true },
-    { "key": "how", "visible": true },
-    { "key": "platform", "visible": true },
-    { "key": "cases", "visible": true },
-    { "key": "roi", "visible": true },
-    { "key": "pricing", "visible": true },
-    { "key": "faq", "visible": true },
-    { "key": "testimonials", "visible": true },
-    { "key": "final-cta", "visible": true },
-    { "key": "form", "visible": true }
+    {
+      "key": "hero",
+      "visible": true
+    },
+    {
+      "key": "problem",
+      "visible": true
+    },
+    {
+      "key": "hotel-ops",
+      "visible": true
+    },
+    {
+      "key": "roi",
+      "visible": true
+    },
+    {
+      "key": "fanzo",
+      "visible": true
+    },
+    {
+      "key": "how",
+      "visible": true
+    },
+    {
+      "key": "platform",
+      "visible": true
+    },
+    {
+      "key": "cases",
+      "visible": true
+    },
+    {
+      "key": "pricing",
+      "visible": true
+    },
+    {
+      "key": "faq",
+      "visible": true
+    },
+    {
+      "key": "testimonials",
+      "visible": true
+    },
+    {
+      "key": "final-cta",
+      "visible": true
+    },
+    {
+      "key": "form",
+      "visible": true
+    }
   ]
 }
