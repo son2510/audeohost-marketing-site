@@ -26,7 +26,7 @@
     },
     {
       "key": "platform",
-      "visible": true
+      "visible": false
     },
     {
       "key": "cases",
