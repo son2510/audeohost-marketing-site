@@ -1,0 +1,16 @@
+<section id="faq" class="block tint">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ faq.eyebrow | safe }}</span>
+      <h2>{{ faq.heading | safe }}</h2>
+    </div>
+    <div class="faq">
+      {%- for item in faq.items %}
+      <details>
+        <summary>{{ item.question | safe }}</summary>
+        <p>{{ item.answer | safe }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

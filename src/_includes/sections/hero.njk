@@ -1,0 +1,20 @@
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">{{ hero.eyebrow | safe }}</span>
+      <h1 style="margin-top:14px;">{{ hero.headline | safe }}</h1>
+      <p class="lede">{{ hero.lede | safe }}</p>
+      <div class="hero-ctas">
+        {%- for cta in hero.ctas %}
+        <a class="btn btn-{{ cta.style }}" href="{{ cta.href }}">{{ cta.label | safe }}</a>
+        {%- endfor %}
+      </div>
+      <div class="hero-proof">
+        {%- for p in hero.proof %}
+        <span><strong>{{ p.stat | safe }}</strong> {{ p.text | safe }}</span>
+        {%- endfor %}
+      </div>
+    </div>
+    <img class="hero-photo" src="{{ hero.image.src }}" alt="{{ hero.image.alt | safe }}">
+  </div>
+</section>

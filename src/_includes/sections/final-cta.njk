@@ -1,0 +1,17 @@
+<section id="trial" class="final">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#bfe8d4;">{{ finalCta.eyebrow | safe }}</span>
+    <h2 style="margin-top:14px;">{{ finalCta.heading | safe }}</h2>
+    <p class="lede">{{ finalCta.subhead | safe }}</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" id="trialCta" href="mailto:{{ regions.items[0].email }}?subject=30-day%20trial%20request">{{ finalCta.primaryCtaLabel | safe }}</a>
+      <a class="btn btn-outline" href="{{ finalCta.demoCta.href }}" target="_blank" rel="noopener">{{ finalCta.demoCta.label | safe }}</a>
+    </div>
+    <div class="contact">
+      <span><strong>{{ finalCta.contactLabels.email | safe }}</strong><span id="regionEmail">{{ regions.items[0].email }}</span></span>
+      <span><strong>{{ finalCta.contactLabels.phone | safe }}</strong><span id="regionPhone">{{ regions.items[0].phone }}</span></span>
+      <span><strong>{{ finalCta.contactLabels.portalLabel | safe }}</strong>{{ finalCta.contactLabels.portalValue | safe }}</span>
+    </div>
+    <p style="margin-top:28px;"><a href="#form" style="color:rgba(255,255,255,0.75);text-decoration:underline;">{{ finalCta.formLinkText | safe }}</a></p>
+  </div>
+</section>

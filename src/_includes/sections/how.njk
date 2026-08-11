@@ -1,0 +1,14 @@
+<section id="how" class="block tint">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ how.eyebrow | safe }}</span>
+      <h2>{{ how.heading | safe }}</h2>
+      <p>{{ how.subhead | safe }}</p>
+    </div>
+    <div class="journey">
+      {%- for step in how.steps %}
+      <div class="jstep"><div class="dot">{{ loop.index }}</div><h4>{{ step.title | safe }}</h4><p>{{ step.text | safe }}</p></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

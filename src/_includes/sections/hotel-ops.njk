@@ -1,0 +1,15 @@
+<section id="hotel-ops" class="block tint">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ hotelOps.eyebrow | safe }}</span>
+      <h2>{{ hotelOps.heading | safe }}</h2>
+      <p>{{ hotelOps.subhead | safe }}</p>
+    </div>
+    <div class="moments">
+      {%- for m in hotelOps.moments %}
+      <div class="moment"><span class="mtag">{{ m.tag | safe }}</span><div class="mbody"><strong>{{ m.title | safe }}</strong><span>{{ m.text | safe }}</span></div></div>
+      {%- endfor %}
+    </div>
+    <p class="beat-strip">{{ hotelOps.beatStrip | safe }}</p>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<section class="testimonials">
+  <div class="block-head">
+    <span class="eyebrow">{{ testimonials.eyebrow | safe }}</span>
+    <h2>{{ testimonials.heading | safe }}</h2>
+  </div>
+  <div class="tmarquee-wrap">
+    <div class="tmarquee">
+      {%- for t in testimonials.items %}
+      <div class="tcard"><span class="stars">★★★★★</span><p>"{{ t.quote | safe }}"</p><div class="attrib">{{ t.attribution | safe }}</div></div>
+      {%- endfor %}
+      {%- for t in testimonials.items %}
+      <div class="tcard" aria-hidden="true"><span class="stars">★★★★★</span><p>"{{ t.quote | safe }}"</p><div class="attrib">{{ t.attribution | safe }}</div></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

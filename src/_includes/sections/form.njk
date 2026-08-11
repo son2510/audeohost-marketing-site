@@ -1,0 +1,67 @@
+<section id="form" class="block tint">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ venueFormSection.eyebrow | safe }}</span>
+      <h2>{{ venueFormSection.heading | safe }}</h2>
+      <p>{{ venueFormSection.subhead | safe }}</p>
+    </div>
+    <form id="venueForm" class="venue-form" novalidate>
+      <div class="form-grid">
+        <div class="fld"><label for="f-name">Your Name</label><input id="f-name" name="contactName" type="text" required></div>
+        <div class="fld"><label for="f-venue">Venue Name</label><input id="f-venue" name="name" type="text" required></div>
+        <div class="fld"><label for="f-postcode">Postcode</label><input id="f-postcode" name="postcode" type="text" required></div>
+        <div class="fld"><label for="f-phone">Telephone</label><input id="f-phone" name="contactPhone" type="tel" required></div>
+        <div class="fld"><label for="f-email">Email</label><input id="f-email" name="contactEmail" type="email" required></div>
+        <div class="fld">
+          <label for="f-tv">Number of TV Sources</label>
+          <select id="f-tv" name="tvSources" required>
+            <option value="">Select…</option>
+            <option value="0">0</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+            <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option><option value="11">10+</option>
+          </select>
+        </div>
+        <div class="fld"><label for="f-tvmodel">Model of TV Sources</label><input id="f-tvmodel" name="modelOfTVSources" type="text" placeholder="e.g. Sky Q, Virgin TV 360" required></div>
+        <div class="fld">
+          <label>Guest Wi-Fi</label>
+          <div class="radio-row">
+            <label><input type="radio" name="hasGuestWifi" value="yes" required> Yes</label>
+            <label><input type="radio" name="hasGuestWifi" value="no"> No</label>
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f-netdist">Distance to Network Port (m)</label>
+          <select id="f-netdist" name="distanceToNetworkPort" required>
+            <option value="">Select…</option>
+            <option value="&lt;1">&lt;1</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+            <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option><option value="10+">10+</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label for="f-powerdist">Distance to Power (m)</label>
+          <select id="f-powerdist" name="distanceToPower" required>
+            <option value="">Select…</option>
+            <option value="&lt;1">&lt;1</option><option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+            <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option><option value="10+">10+</option>
+          </select>
+        </div>
+      </div>
+      <div class="fld full"><label for="f-notes">Other Information</label><textarea id="f-notes" name="notes" rows="3" placeholder="Anything else we should know?"></textarea></div>
+
+      <div class="hp-field" aria-hidden="true">
+        <label for="f-company">Company Website</label>
+        <input id="f-company" name="honeypot" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="fld math"><label for="f-math">What is 3 + 4?</label><input id="f-math" name="mathAnswer" type="number" required></div>
+
+      <button type="submit" class="btn btn-gold" id="formSubmit">{{ venueFormSection.submitLabel | safe }}</button>
+      <p id="formStatus" class="form-status" role="status"></p>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ platform.eyebrow | safe }}</span>
+      <h2>{{ platform.heading | safe }}</h2>
+      <p>{{ platform.subhead | safe }}</p>
+    </div>
+    <div class="cards2">
+      {%- for card in platform.cards %}
+      <div class="card">
+        <span class="tag">{{ card.tag | safe }}</span>
+        <h3>{{ card.title | safe }}</h3>
+        <p>{{ card.text | safe }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="beat-strip">{{ platform.beatStrip | safe }}</p>
+  </div>
+</section>

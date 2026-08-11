@@ -1,0 +1,18 @@
+<section id="problem" class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ problem.eyebrow | safe }}</span>
+      <h2>{{ problem.heading | safe }}</h2>
+      <p>{{ problem.subhead | safe }}</p>
+    </div>
+    <div class="cards3">
+      {%- for card in problem.cards %}
+      <div class="card">
+        <span class="tag">{{ card.tag | safe }}</span>
+        <h3>{{ card.title | safe }}</h3>
+        <p>{{ card.text | safe }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section id="fanzo" class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ fanzo.eyebrow | safe }}</span>
+      <h2>{{ fanzo.heading | safe }}</h2>
+      <p>{{ fanzo.subhead | safe }}</p>
+    </div>
+    <div class="beat3">
+      {%- for beat in fanzo.beats %}
+      <div class="beat-card {{ beat.style }}">
+        <span class="beat-tag">{{ beat.tag | safe }}</span>
+        <h3>{{ beat.title | safe }}</h3>
+        <p>{{ beat.text | safe }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="beat-strip">{{ fanzo.beatStrip | safe }}</p>
+  </div>
+</section>

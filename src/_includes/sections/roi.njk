@@ -1,0 +1,19 @@
+<section id="roi" class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ roi.eyebrow | safe }}</span>
+      <h2>{{ roi.heading | safe }}</h2>
+      <p>{{ roi.subhead | safe }}</p>
+    </div>
+    <div class="roi-contrast">
+      {%- for c in roi.contrast %}
+      <div class="card">
+        <span class="tag">{{ c.tag | safe }}</span>
+        <h3>{{ c.title | safe }}</h3>
+        <p>{{ c.text | safe }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="beat-strip">{{ roi.beatStrip | safe }}</p>
+  </div>
+</section>

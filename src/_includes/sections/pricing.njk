@@ -1,0 +1,25 @@
+<section id="pricing" class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">{{ pricing.eyebrow | safe }}</span>
+      <h2>{{ pricing.heading | safe }}</h2>
+      <p>{{ pricing.subhead | safe }}</p>
+    </div>
+    <div class="region-switch" role="group" aria-label="Choose your region">
+      {%- for r in regions.items %}
+      <button type="button" class="region-btn" data-region="{{ r.key }}">{{ r.label }}</button>
+      {%- endfor %}
+    </div>
+    <div class="pricing-wrap">
+      <table class="pricing">
+        <thead><tr><th>Product</th><th>Price</th><th>What it does</th></tr></thead>
+        <tbody>
+          {%- for row in pricing.rows %}
+          <tr{% if row.bundle %} class="bundle"{% endif %}><td><strong>{{ row.label }}</strong></td><td class="price">{% if row.priceFrom %}from {% endif %}<span class="cur">€</span>{{ row.price }}&nbsp;{{ row.period }}</td><td>{{ row.description | safe }}</td></tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note">30-day free trial, then <span class="cur">€</span>{{ pricing.rows[2].price }}{{ pricing.trialNoteSuffix | safe }}</p>
+  </div>
+</section>
