@@ -1,7 +1,7 @@
 {
-  "eyebrow": "Venue engagement platform",
-  "headline": "Every event has an audience.<br><em>Every screen has sound.</em>",
-  "lede": "Business to Customer (B2C) engagement is where Audeohost lives, connecting venues and customers together.\nYou’ve got a chef in the kitchen, artists booked, paid live TV sport, a trainer in the gym, or a pool lifeguard.   \nWhether it’s a match, or midweek event, nothing in your venue goes unnoticed or unheard, and all need an ROI.",
+  "eyebrow": "The Business Outcome",
+  "headline": "<em>Turn everything your venue offers into a reason to visit.</em>",
+  "lede": "Audeohost turns everything your venue has to offer into discoverable events — automatically connecting those experiences with current and new customers to drive footfall, engagement and ROI.",
   "ctas": [
     {
       "label": "Start your 30-day trial →",
@@ -30,6 +30,6 @@
   ],
   "image": {
     "src": "assets/uploads/hero-portal-and-phone.jpg",
-    "alt": "The Audeo-Portal events schedule on a laptop next to a phone showing the same events live in the Audeohost-Events app"
+    "alt": "Audeo-Portal and Audeohost-Events app showing same content"
   }
 }
