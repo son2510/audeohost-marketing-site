@@ -1,9 +1,17 @@
 {
   "links": [
-    { "label": "Pricing", "href": "#pricing" },
-    { "label": "FAQ", "href": "#faq" },
-    { "label": "Privacy Policy", "href": "privacy-policy.html" },
-    { "label": "Delete Account", "href": "delete-account.html" }
+    {
+      "label": "Pricing",
+      "href": "#pricing"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "privacy-policy.html"
+    },
+    {
+      "label": "Data Compliance",
+      "href": "delete-account.html"
+    }
   ],
   "copyright": "© 2026 Audeohost — Hearing the Complete Picture"
 }
