@@ -80,8 +80,6 @@ permalink: "{{ page.filePathStem }}.html"
   .post .tags { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
   .post .tags span { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); background: var(--paper-dim); border-radius: 999px; padding: 4px 11px; }
 
-  .note { border-left: 3px solid var(--emerald); background: color-mix(in srgb, var(--emerald) 7%, var(--surface)); border-radius: 0 10px 10px 0; padding: 16px 20px; margin-top: 30px; max-width: 66ch; font-size: 0.88rem; color: var(--muted); }
-
   footer { padding: 34px 0; border-top: 1px solid var(--line); margin-top: 60px; }
   .foot-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; font-size: 0.82rem; color: var(--muted); max-width: 1160px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
   .foot-row a { text-decoration: none; color: var(--muted); }
@@ -120,8 +118,6 @@ permalink: "{{ page.filePathStem }}.html"
       </article>
       {%- endfor %}
     </div>
-
-    <div class="note">These are full pages under <code>blog/posts/</code>, self-hosted here rather than linking out — so they stay working even if this site becomes the real audeohost.com. New posts are added through the CMS, or by dropping a new Markdown file into <code>src/blog/posts/</code>.</div>
   </div>
 </main>
 
