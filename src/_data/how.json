@@ -1,7 +1,7 @@
 {
   "eyebrow": "How it works",
   "heading": "Discover, choose, go, listen — and come back.",
-  "subhead": "One platform runs the whole guest journey, from discovering events once they arrive, to a guest looking for dinner or a fan looking for kick-off.",
+  "subhead": "One platform runs the whole guest journey, from discovering events, to a guest looking for dinner or a fan looking for kick-off.",
   "steps": [
     {
       "title": "Discover",
@@ -17,7 +17,7 @@
     },
     {
       "title": "Listen",
-      "text": "For TV events, they tune their phone to the right channel. Sound follows them, not the wall."
+      "text": "For TV events, they tune their phone to the right channel or zone. Sound follows them."
     },
     {
       "title": "Return",
