@@ -19,7 +19,7 @@
     {
       "key": "ca",
       "label": "Canada",
-      "currency": "C$",
+      "currency": "$",
       "email": "tellmemore@audeohost.ca",
       "phone": "(647) 479-2847",
       "enquiryApiCode": "CA"
