@@ -1,11 +1,8 @@
 name: Deploy to audeohost.com server
 
-# Manual trigger only, on purpose: this uses `rsync --delete`, so the first
-# run will replace everything currently in the target directory with this
-# build. Once a manual run has been confirmed working against the live
-# server, add `push: branches: [main]` back in to make it automatic like
-# the GitHub Pages deploy.
 on:
+  push:
+    branches: [main]
   workflow_dispatch: {}
 
 jobs:
